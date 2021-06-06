@@ -45,7 +45,7 @@ export class PlayersService {
   }
 
   async deletePlayer(email: string): Promise<any> {
-    return await this.playerModel.remove({ email }).exec();
+    return await this.playerModel.deleteOne({ email }).exec();
 
     // const foundPlayer = this.players.find((player) => player.email === email);
     // this.players = this.players.filter(
